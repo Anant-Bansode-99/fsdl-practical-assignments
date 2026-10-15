@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Reference - Simple Table</title>
+</head>
+<body>
+    <h1>HTML Tags Reference</h1>
+    
+    <h2>Document Structure & Metadata</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;html&gt;</code></td>
+                <td>Root element of an HTML document</td>
+                <td><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;head&gt;</code></td>
+                <td>Container for metadata</td>
+                <td><code>&lt;head&gt;&lt;title&gt;Page&lt;/title&gt;&lt;/head&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;body&gt;</code></td>
+                <td>Contains the visible page content</td>
+                <td><code>&lt;body&gt;Content here&lt;/body&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;!DOCTYPE&gt;</code></td>
+                <td>Document type declaration</td>
+                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;title&gt;</code></td>
+                <td>Document title (shown in browser tab)</td>
+                <td><code>&lt;title&gt;My Page&lt;/title&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;meta&gt;</code></td>
+                <td>Provides metadata about the document</td>
+                <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;link&gt;</code></td>
+                <td>Links external resources (CSS, icons)</td>
+                <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;style&gt;</code></td>
+                <td>Contains CSS style information</td>
+                <td><code>&lt;style&gt;body { color: red; }&lt;/style&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;base&gt;</code></td>
+                <td>Specifies base URL for relative URLs</td>
+                <td><code>&lt;base href="https://example.com/"&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Text Formatting</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>Paragraph of text</td>
+                <td><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;h1&gt; - &lt;h6&gt;</code></td>
+                <td>Heading elements (h1 to h6)</td>
+                <td><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;b&gt;</code></td>
+                <td>Bold text (stylistic)</td>
+                <td>This is <code>&lt;b&gt;bold&lt;/b&gt;</code> text.</td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;strong&gt;</code></td>
+                <td>Important text (semantic)</td>
+                <td>This is <code>&lt;strong&gt;important&lt;/strong&gt;</code>.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;i&gt;</code></td>
+                <td>Italic text (stylistic)</td>
+                <td>This is <code>&lt;i&gt;italic&lt;/i&gt;</code> text.</td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;em&gt;</code></td>
+                <td>Emphasized text (semantic)</td>
+                <td>This is <code>&lt;em&gt;emphasized&lt;/em&gt;</code> text.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;u&gt;</code></td>
+                <td>Underlined text</td>
+                <td>This is <code>&lt;u&gt;underlined&lt;/u&gt;</code> text.</td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;mark&gt;</code></td>
+                <td>Highlighted text</td>
+                <td>This is <code>&lt;mark&gt;highlighted&lt;/mark&gt;</code> text.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;small&gt;</code></td>
+                <td>Small print</td>
+                <td><code>&lt;small&gt;Copyright notice&lt;/small&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;sub&gt;</code></td>
+                <td>Subscript text</td>
+                <td>H<code>&lt;sub&gt;2&lt;/sub&gt;</code>O</td>
+            </tr>
+            <tr>
+                <td><code>&lt;sup&gt;</code></td>
+                <td>Superscript text</td>
+                <td>x<code>&lt;sup&gt;2&lt;/sup&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;code&gt;</code></td>
+                <td>Inline code fragment</td>
+                <td>Use <code>&lt;code&gt;console.log()&lt;/code&gt;</code> to debug.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;br&gt;</code></td>
+                <td>Line break</td>
+                <td>Line 1<code>&lt;br&gt;</code>Line 2</td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;hr&gt;</code></td>
+                <td>Thematic break (horizontal rule)</td>
+                <td><code>&lt;hr&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;pre&gt;</code></td>
+                <td>Preformatted text</td>
+                <td><code>&lt;pre&gt;Text with   spaces&lt;/pre&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Links & Navigation</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Hyperlink (anchor)</td>
+                <td><code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Contains navigation links</td>
+                <td><code>&lt;nav&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/nav&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Lists</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;ul&gt;</code></td>
+                <td>Unordered list</td>
+                <td><code>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;ol&gt;</code></td>
+                <td>Ordered list</td>
+                <td><code>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;/ol&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;li&gt;</code></td>
+                <td>List item</td>
+                <td><code>&lt;li&gt;List item content&lt;/li&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;dl&gt;</code></td>
+                <td>Description list</td>
+                <td><code>&lt;dl&gt;&lt;dt&gt;Term&lt;/dt&gt;&lt;dd&gt;Definition&lt;/dd&gt;&lt;/dl&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;dt&gt;</code></td>
+                <td>Term in description list</td>
+                <td><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;dd&gt;</code></td>
+                <td>Description in description list</td>
+                <td><code>&lt;dd&gt;HyperText Markup Language&lt;/dd&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Tables</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;table&gt;</code></td>
+                <td>Table container</td>
+                <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;tr&gt;</code></td>
+                <td>Table row</td>
+                <td><code>&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;td&gt;</code></td>
+                <td>Table data cell</td>
+                <td><code>&lt;td&gt;Table data&lt;/td&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;th&gt;</code></td>
+                <td>Table header cell</td>
+                <td><code>&lt;th&gt;Column Header&lt;/th&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;thead&gt;</code></td>
+                <td>Table header section</td>
+                <td><code>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;tbody&gt;</code></td>
+                <td>Table body section</td>
+                <td><code>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;tfoot&gt;</code></td>
+                <td>Table footer section</td>
+                <td><code>&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;caption&gt;</code></td>
+                <td>Table title/caption</td>
+                <td><code>&lt;caption&gt;Monthly Sales&lt;/caption&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Forms</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;form&gt;</code></td>
+                <td>Container for form elements</td>
+                <td><code>&lt;form action="/submit" method="post"&gt;&lt;/form&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;input&gt;</code></td>
+                <td>Form input control</td>
+                <td><code>&lt;input type="text" name="username"&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;textarea&gt;</code></td>
+                <td>Multi-line text input</td>
+                <td><code>&lt;textarea rows="4" cols="50"&gt;&lt;/textarea&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;button&gt;</code></td>
+                <td>Clickable button</td>
+                <td><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;select&gt;</code></td>
+                <td>Drop-down list</td>
+                <td><code>&lt;select&gt;&lt;option&gt;Choice 1&lt;/option&gt;&lt;/select&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;option&gt;</code></td>
+                <td>Option in a select</td>
+                <td><code>&lt;option value="1"&gt;Option 1&lt;/option&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;label&gt;</code></td>
+                <td>Caption for a form control</td>
+                <td><code>&lt;label for="name"&gt;Name:&lt;/label&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Media</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Image</td>
+                <td><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;audio&gt;</code></td>
+                <td>Audio content</td>
+                <td><code>&lt;audio controls src="audio.mp3"&gt;&lt;/audio&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;video&gt;</code></td>
+                <td>Video content</td>
+                <td><code>&lt;video controls src="video.mp4"&gt;&lt;/video&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;iframe&gt;</code></td>
+                <td>Inline frame</td>
+                <td><code>&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Semantic HTML5</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Introductory content</td>
+                <td><code>&lt;header&gt;&lt;h1&gt;Site Title&lt;/h1&gt;&lt;/header&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Footer content</td>
+                <td><code>&lt;footer&gt;Copyright 2024&lt;/footer&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Self-contained composition</td>
+                <td><code>&lt;article&gt;&lt;h2&gt;Blog Post&lt;/h2&gt;&lt;/article&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;section&gt;</code></td>
+                <td>Thematic grouping of content</td>
+                <td><code>&lt;section&gt;&lt;h2&gt;Chapter 1&lt;/h2&gt;&lt;/section&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;aside&gt;</code></td>
+                <td>Tangentially related content</td>
+                <td><code>&lt;aside&gt;Related links...&lt;/aside&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;main&gt;</code></td>
+                <td>Main content area</td>
+                <td><code>&lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Containers</h2>
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+            <tr bgcolor="#3498db">
+                <th width="15%"><font color="white">Tag</font></th>
+                <th width="40%"><font color="white">Description</font></th>
+                <th width="45%"><font color="white">Example</font></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;div&gt;</code></td>
+                <td>Generic block container</td>
+                <td><code>&lt;div class="container"&gt;Content&lt;/div&gt;</code></td>
+            </tr>
+            <tr bgcolor="#f8f9fa">
+                <td><code>&lt;span&gt;</code></td>
+                <td>Generic inline container</td>
+                <td><code>&lt;span style="color:red"&gt;Red text&lt;/span&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+    
+  </body>
+</html>

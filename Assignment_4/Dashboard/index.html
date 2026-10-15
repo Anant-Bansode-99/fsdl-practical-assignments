@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <span class="logo">&#9925;</span>
+            <div>
+                <h1>Weather Dashboard</h1>
+                <span id="current-date" class="subtitle"></span>
+            </div>
+        </div>
+        <div class="header-right">
+            <label for="city-select">City</label>
+            <select id="city-select" onchange="loadCity()">
+                <option value="delhi">New Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="chennai">Chennai</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Stat Cards: 3 cards -->
+        <section class="stat-cards">
+
+            <div class="card card-blue">
+                <div class="card-icon">🌡️</div>
+                <div class="card-info">
+                    <div class="card-label">Temperature</div>
+                    <div class="card-value" id="temp">--°C</div>
+                    <div class="card-sub" id="temp-feel">Feels like --°C</div>
+                </div>
+            </div>
+
+            <div class="card card-teal">
+                <div class="card-icon">💧</div>
+                <div class="card-info">
+                    <div class="card-label">Humidity</div>
+                    <div class="card-value" id="humidity">--%</div>
+                    <div class="card-sub">Relative Humidity</div>
+                </div>
+            </div>
+
+            <div class="card card-orange">
+                <div class="card-icon" id="condition-icon">--</div>
+                <div class="card-info">
+                    <div class="card-label">Condition</div>
+                    <div class="card-value small" id="condition-text">--</div>
+                    <div class="card-sub">Current Weather</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Charts -->
+        <section class="charts-grid">
+
+            <div class="chart-box wide">
+                <div class="chart-header">
+                    <h2>7-Day Temperature</h2>
+                    <span class="chart-unit">°C</span>
+                </div>
+                <canvas id="tempChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <div class="chart-header">
+                    <h2>Condition Breakdown</h2>
+                    <span class="chart-unit">This Week</span>
+                </div>
+                <canvas id="conditionChart"></canvas>
+            </div>
+
+        </section>
+
+        <!-- Hourly Forecast -->
+        <section class="hourly-section">
+            <h2 class="section-title">Today's Hourly Forecast</h2>
+            <div class="hourly-strip" id="hourly-strip"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Data is simulated for educational purposes &mdash; Weather Dashboard &copy; 2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

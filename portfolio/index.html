@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anant Bansode's Portfolio — Computer Science Engineering student passionate about building modern web apps, solving complex problems, and turning ideas into reality." />
+  <meta name="keywords" content="Anant Bansode, Anant, CSE, Computer Science, Portfolio, B.Tech, Developer, Web Development, Projects" />
+  <meta property="og:title" content="Anant Bansode | CSE Student Portfolio" />
+  <meta property="og:description" content="Explore my projects, skills, and journey as a Computer Science Engineering student." />
+  <title>Anant Bansode | B.Tech CSE Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= NAV ======= -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>Anant Bansode<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section id="home" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Internships &amp; Projects
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Anant Bansode</span>
+      </h1>
+      <div class="hero-subtitle-wrap">
+        <span class="hero-subtitle-static">I'm a </span>
+        <span class="hero-typewriter" id="typewriter"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-description">
+        B.Tech Computer Science Engineering student crafting clean, scalable, and impactful digital experiences. 
+        Passionate about full-stack development, problem solving, and open source.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="view-work-btn">
+          <span>View My Work</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary" id="contact-hero-btn">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="8">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Problems Solved</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <div class="photo-container">
+          <img src="anant.jpg" alt="Anant Bansode — B.Tech CSE Student" class="hero-photo" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ABOUT ======= -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+        <p class="section-sub">A curious engineer who loves to build, break, and learn.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <div class="avatar-art">
+                <div class="av-circle c1"></div>
+                <div class="av-circle c2"></div>
+                <div class="av-circle c3"></div>
+                <span class="av-initial">AB</span>
+              </div>
+            </div>
+            <div class="ring-orbit">
+              <div class="orbit-dot"></div>
+            </div>
+          </div>
+          <div class="about-cards-mini">
+            <div class="mini-card" id="mc-1">
+              <span class="mc-icon">&#127891;</span>
+              <div>
+                <strong>B.Tech CSE</strong>
+                <small>3rd Year</small>
+              </div>
+            </div>
+            <div class="mini-card" id="mc-2">
+              <span class="mc-icon">&#128187;</span>
+              <div>
+                <strong>Full-Stack Dev</strong>
+                <small>MERN / Next.js</small>
+              </div>
+            </div>
+            <div class="mini-card" id="mc-3">
+              <span class="mc-icon">&#127942;</span>
+              <div>
+                <strong>DSA</strong>
+                <small>500+ Problems</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-intro">
+            I'm <strong>Anant Bansode</strong>, a passionate Computer Science Engineering student on a mission to create 
+            technology that makes a difference. My journey started with curiosity about how websites work, 
+            which quickly evolved into a love for building full-stack applications.
+          </p>
+          <p>
+            Currently in my 3rd year, I've been deeply involved in developing real-world projects, 
+            participating in hackathons, and continuously leveling up my skills in algorithms and system design.
+          </p>
+          <p>
+            When I'm not coding, I'm contributing to open source, learning about AI/ML, or sharing 
+            knowledge with the dev community.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <svg class="hi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Clean Code Advocate
+            </div>
+            <div class="highlight-item">
+              <svg class="hi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Hackathon Enthusiast
+            </div>
+            <div class="highlight-item">
+              <svg class="hi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Open Source Contributor
+            </div>
+            <div class="highlight-item">
+              <svg class="hi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Competitive Programmer
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" id="resume-btn" download>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS ======= -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <p class="section-sub">Tools and technologies I work with regularly.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" id="sk-frontend">
+          <div class="sk-cat-header">
+            <span class="sk-cat-icon">&#128421;</span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#61DAFB">React.js</span>
+            <span class="skill-tag" style="--clr:#888">Next.js</span>
+            <span class="skill-tag" style="--clr:#F7DF1E">JavaScript</span>
+            <span class="skill-tag" style="--clr:#3178C6">TypeScript</span>
+            <span class="skill-tag" style="--clr:#E34F26">HTML5</span>
+            <span class="skill-tag" style="--clr:#1572B6">CSS3</span>
+            <span class="skill-tag" style="--clr:#38BDF8">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-category" id="sk-backend">
+          <div class="sk-cat-header">
+            <span class="sk-cat-icon">&#9881;</span>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#339933">Node.js</span>
+            <span class="skill-tag" style="--clr:#888">Express.js</span>
+            <span class="skill-tag" style="--clr:#3776AB">Python</span>
+            <span class="skill-tag" style="--clr:#4CAF50">Django</span>
+            <span class="skill-tag" style="--clr:#47A248">MongoDB</span>
+            <span class="skill-tag" style="--clr:#4479A1">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-category" id="sk-tools">
+          <div class="sk-cat-header">
+            <span class="sk-cat-icon">&#128295;</span>
+            <h3>Tools &amp; Others</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#F05032">Git</span>
+            <span class="skill-tag" style="--clr:#2496ED">Docker</span>
+            <span class="skill-tag" style="--clr:#FF9900">AWS</span>
+            <span class="skill-tag" style="--clr:#888">GitHub</span>
+            <span class="skill-tag" style="--clr:#6DB33F">Linux</span>
+            <span class="skill-tag" style="--clr:#007ACC">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-category" id="sk-core">
+          <div class="sk-cat-header">
+            <span class="sk-cat-icon">&#129504;</span>
+            <h3>CS Fundamentals</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag" style="--clr:#A97BFF">DSA</span>
+            <span class="skill-tag" style="--clr:#FF6B6B">OOP</span>
+            <span class="skill-tag" style="--clr:#4ECDC4">DBMS</span>
+            <span class="skill-tag" style="--clr:#45B7D1">OS</span>
+            <span class="skill-tag" style="--clr:#96CEB4">CN</span>
+            <span class="skill-tag" style="--clr:#FFEAA7">System Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proficiency-bars">
+        <h3 class="pb-title">Proficiency</h3>
+        <div class="pb-list">
+          <div class="pb-item" id="pb-1">
+            <div class="pb-label">
+              <span>JavaScript / TypeScript</span>
+              <span class="pb-percent">90%</span>
+            </div>
+            <div class="pb-track"><div class="pb-fill" style="--w:90%;--clr:#F7DF1E"></div></div>
+          </div>
+          <div class="pb-item" id="pb-2">
+            <div class="pb-label">
+              <span>React.js / Next.js</span>
+              <span class="pb-percent">85%</span>
+            </div>
+            <div class="pb-track"><div class="pb-fill" style="--w:85%;--clr:#61DAFB"></div></div>
+          </div>
+          <div class="pb-item" id="pb-3">
+            <div class="pb-label">
+              <span>Node.js / Express</span>
+              <span class="pb-percent">80%</span>
+            </div>
+            <div class="pb-track"><div class="pb-fill" style="--w:80%;--clr:#339933"></div></div>
+          </div>
+          <div class="pb-item" id="pb-4">
+            <div class="pb-label">
+              <span>Python / Django</span>
+              <span class="pb-percent">75%</span>
+            </div>
+            <div class="pb-track"><div class="pb-fill" style="--w:75%;--clr:#3776AB"></div></div>
+          </div>
+          <div class="pb-item" id="pb-5">
+            <div class="pb-label">
+              <span>Data Structures &amp; Algorithms</span>
+              <span class="pb-percent">88%</span>
+            </div>
+            <div class="pb-track"><div class="pb-fill" style="--w:88%;--clr:#A97BFF"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS ======= -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-sub">Things I've built with passion and purpose.</p>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="filter-btn" data-filter="web" id="filter-web">Web Dev</button>
+        <button class="filter-btn" data-filter="ml" id="filter-ml">ML/AI</button>
+        <button class="filter-btn" data-filter="tool" id="filter-tool">Tools</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card featured" data-category="web" id="proj-1">
+          <div class="proj-featured-badge">&#11088; Featured</div>
+          <div class="proj-top">
+            <div class="proj-icon">&#127760;</div>
+            <div class="proj-links">
+              <a href="#" class="proj-link" title="GitHub" id="proj1-github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="proj-link" title="Live Demo" id="proj1-live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Personal Portfolio Website</h3>
+          <p class="proj-desc">A fully responsive, modern portfolio website built from scratch using HTML, CSS, and Vanilla JavaScript. Features animated particle canvas, typewriter effect, scroll-reveal animations, skill progress bars, project filter system, and a functional contact form — all without any frameworks.</p>
+          <div class="proj-tech">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Canvas API</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" id="proj-2">
+          <div class="proj-top">
+            <div class="proj-icon">&#127891;</div>
+            <div class="proj-links">
+              <a href="#" class="proj-link" title="GitHub" id="proj2-github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="proj-link" title="Live Demo" id="proj2-live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Student Result Management System</h3>
+          <p class="proj-desc">A full-stack web application for managing student academic results. Admins can add/update results, students can log in to view their marksheets, and the system generates downloadable PDFs with grade calculations and rankings.</p>
+          <div class="proj-tech">
+            <span>React</span><span>Node.js</span><span>MySQL</span><span>Express</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" id="proj-3">
+          <div class="proj-top">
+            <div class="proj-icon">&#127780;</div>
+            <div class="proj-links">
+              <a href="#" class="proj-link" title="GitHub" id="proj3-github">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="proj-link" title="Live Demo" id="proj3-live">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="proj-title">Weather Forecast App</h3>
+          <p class="proj-desc">A real-time weather application that fetches live data from the OpenWeatherMap API. Displays 5-day forecasts, humidity, wind speed, UV index, and supports searching by city name or current GPS location with a beautiful animated UI.</p>
+          <div class="proj-tech">
+            <span>JavaScript</span><span>OpenWeatherMap API</span><span>CSS3</span><span>Geolocation API</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EDUCATION ======= -->
+  <section id="education" class="education section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Education &amp; Achievements</h2>
+        <p class="section-sub">Academic milestones and proud moments.</p>
+      </div>
+      <div class="edu-timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item" id="edu-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-icon">&#127891;</div>
+              <div>
+                <span class="tc-year">2022 &ndash; 2026</span>
+                <h3 class="tc-title">B.Tech in Computer Science Engineering</h3>
+                <p class="tc-place">Your University Name, City</p>
+              </div>
+            </div>
+            <p class="tc-desc">Pursuing B.Tech in CSE with focus on algorithms, system design, full-stack web development, and machine learning fundamentals.</p>
+            <div class="tc-badges">
+              <span class="tc-badge">CGPA: 8.7/10</span>
+              <span class="tc-badge">Tech Club Lead</span>
+              <span class="tc-badge">Dean's List</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" id="edu-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-icon">&#127979;</div>
+              <div>
+                <span class="tc-year">2020 &ndash; 2022</span>
+                <h3 class="tc-title">Higher Secondary (12th Grade)</h3>
+                <p class="tc-place">Your School Name, City</p>
+              </div>
+            </div>
+            <p class="tc-desc">Completed 12th grade with PCM (Physics, Chemistry, Mathematics), scoring 94% in board examinations.</p>
+            <div class="tc-badges">
+              <span class="tc-badge">94% Score</span>
+              <span class="tc-badge">School Topper</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="edu-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-icon">&#127942;</div>
+              <div>
+                <span class="tc-year">2023</span>
+                <h3 class="tc-title">Hackathon Winner</h3>
+                <p class="tc-place">National Level Hackathon</p>
+              </div>
+            </div>
+            <p class="tc-desc">Won 1st place at a 36-hour national hackathon with a health-tech solution serving 500+ users.</p>
+            <div class="tc-badges">
+              <span class="tc-badge gold">&#129351; 1st Place</span>
+              <span class="tc-badge">&#8377;50,000 Prize</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" id="edu-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div class="tc-icon">&#128220;</div>
+              <div>
+                <span class="tc-year">2023 &ndash; 2024</span>
+                <h3 class="tc-title">Certifications</h3>
+                <p class="tc-place">Online Platforms</p>
+              </div>
+            </div>
+            <p class="tc-desc">Earned industry-recognized certifications across cloud, development, and data science domains.</p>
+            <div class="tc-badges">
+              <span class="tc-badge">AWS Cloud Practitioner</span>
+              <span class="tc-badge">Meta React Developer</span>
+              <span class="tc-badge">Google Data Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT ======= -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub">Open to internships, collaborations, and exciting projects.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's build something amazing together!</h3>
+          <p>Whether you have an internship opportunity, a project idea, or just want to say hello &mdash; my inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:anant@email.com" class="contact-item" id="contact-email">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>anant@email.com</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/anant" target="_blank" rel="noopener" class="contact-item" id="contact-linkedin">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/anant</span>
+              </div>
+            </a>
+            <a href="https://github.com/anant" target="_blank" rel="noopener" class="contact-item" id="contact-github">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/anant</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email-input">Email Address</label>
+            <input type="email" id="contact-email-input" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <input type="text" id="contact-subject" name="subject" placeholder="Internship Opportunity / Project Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Hi Anant Bansode, I'd love to connect about..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width" id="send-msg-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <div class="form-success" id="form-success">
+            &#9989; Message sent successfully! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Anant Bansode<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-text">Crafted with &#10084;&#65039; by Anant Bansode &middot; B.Tech CSE</p>
+        <div class="footer-social">
+          <a href="https://github.com/anant" target="_blank" rel="noopener" class="social-link" id="footer-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/anant" target="_blank" rel="noopener" class="social-link" id="footer-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:anant@email.com" class="social-link" id="footer-email" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2024 Anant Bansode. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

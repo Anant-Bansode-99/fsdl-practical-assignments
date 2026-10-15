@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Lore | Premium Fashion</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.png" alt="Logo" height="40" class="me-2" style="border-radius: 8px;">
+        <span>Luxe Lore</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMenu">
+        <i class="fa-solid fa-bars fs-4"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+
+          <li class="nav-item me-3 mb-2 mb-lg-0">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0" style="border-radius: 8px 0 0 8px;"><i
+                  class="fa-solid fa-search text-muted"></i></span>
+              <input type="text" id="searchInput" onkeyup="searchProducts()" class="form-control border-start-0 ps-0"
+                placeholder="Search curated styles...">
+            </div>
+          </li>
+
+          <li class="nav-item me-3 mb-2 mb-lg-0">
+            <select id="sortSelect" class="form-select" onchange="sortProducts()">
+              <option value="">Sort Collection</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </li>
+
+          <li class="nav-item me-2">
+            <a class="nav-link" href="login.html"><i class="fa-regular fa-user me-1"></i> Sign In</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link position-relative d-inline-block" href="cart.html">
+              <i class="fa-solid fa-bag-shopping fs-5"></i>
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle" id="cartCount">0</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div class="container-fluid px-0 px-md-4">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop"
+            class="d-block w-100" alt="Fashion collection">
+          <div class="hero-text">
+            <h1>The Summer Edit</h1>
+            <p>Discover effortless elegance with our latest arrivals. Curated for the modern connoisseur.</p>
+            <a href="#shop" class="btn btn-accent mt-3">Explore Collection</a>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1974&auto=format&fit=crop"
+            class="d-block w-100" alt="Men's collection">
+          <div class="hero-text">
+            <h1>Modern Tailoring</h1>
+            <p>Refined menswear essentials that blend comfort with uncompromising style.</p>
+            <a href="#shop" class="btn btn-accent mt-3">Shop Men's</a>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=2012&auto=format&fit=crop"
+            class="d-block w-100" alt="Footwear">
+          <div class="hero-text">
+            <h1>Elevated Footwear</h1>
+            <p>Step into luxury with our painstakingly crafted shoe collection.</p>
+            <a href="#shop" class="btn btn-accent mt-3">Discover Shoes</a>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Category Headers -->
+  <div id="shop" class="container mt-5 pt-4">
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6">
+        <h2 class="fw-bold fs-1 mb-2">Curated Offerings</h2>
+        <p class="text-muted mb-0">Select a category to refine your experience.</p>
+      </div>
+      <div class="col-md-6 text-md-end mt-4 mt-md-0 category-btn-group">
+        <button class="btn btn-dark" onclick="filterCategory('All')">All</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Men')">Men</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Women')">Women</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Shoes')">Shoes</button>
+        <button class="btn btn-outline-dark" onclick="filterCategory('Accessories')">Accessories</button>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row g-4" id="productContainer">
+      <!-- Products will be injected here via JS -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row gy-4 text-center text-md-start">
+        <div class="col-md-4">
+          <a class="navbar-brand d-inline-flex align-items-center mb-3" href="index.html"
+            style="color: white !important;">
+            <img src="images/logo.png" alt="Logo" height="40" class="me-2" style="border-radius: 8px;">
+            <span style="background: none; -webkit-text-fill-color: white; color: white;">Luxe Lore</span>
+          </a>
+          <p class="mb-4">Elevating everyday style with premium quality, sustainable practices, and timeless design
+            aesthetics.</p>
+          <div class="social-icons d-flex justify-content-center justify-content-md-start">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest-p"></i>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-white mb-4 fw-bold">Explore</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html">Shop Collection</a></li>
+            <li class="mb-2"><a href="about.html">Our Story</a></li>
+            <li class="mb-2"><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-white mb-4 fw-bold">Account</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="login.html">User Login</a></li>
+            <li class="mb-2"><a href="cart.html">View Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="mt-5 mb-4 border-secondary">
+      <div class="text-center">
+        <p class="mb-0 small">© 2026 Luxe Lore. Designed for excellence. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

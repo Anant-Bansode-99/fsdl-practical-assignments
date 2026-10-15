@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.navbar .nav-link {
+  color: white !important;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to right, #000000, #111827);
+  color: white;
+  padding-top: 80px;
+}
+
+.hero-title {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #9ca3af;
+}
+
+.hero-desc {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+.highlight {
+  color: #0d6efd;
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  color: black;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.section-text {
+  font-size: 16px;
+  color: #374151;
+}
+
+.info-box {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skill-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #0d6efd;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 10px;
+}
+
+footer {
+  font-size: 14px;
+}

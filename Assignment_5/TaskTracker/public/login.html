@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In – TaskFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0F172A;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Soft background pattern - subtle and human */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 70% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrap {
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            min-height: 520px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Left panel - colorful brand side */
+        .brand-panel {
+            flex: 1;
+            background: linear-gradient(140deg, #10B981 0%, #059669 60%, #047857 100%);
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .brand-panel .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-panel .logo i {
+            font-size: 28px;
+        }
+
+        .brand-panel .tagline {
+            margin-top: auto;
+        }
+
+        .brand-panel h2 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .brand-panel p {
+            font-size: 15px;
+            opacity: 0.82;
+            line-height: 1.6;
+        }
+
+        .brand-panel .dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .brand-panel .dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .brand-panel .dots span:first-child {
+            background: rgba(255, 255, 255, 0.9);
+            width: 20px;
+            border-radius: 4px;
+        }
+
+        /* Right panel - form side */
+        .form-panel {
+            flex: 1;
+            background: #1E293B;
+            padding: 50px 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-panel .form-header {
+            margin-bottom: 30px;
+        }
+
+        .form-panel .form-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #F8FAFC;
+            margin-bottom: 6px;
+        }
+
+        .form-panel .form-header p {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #E2E8F0;
+            margin-bottom: 6px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 18px;
+            pointer-events: none;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 11px 14px 11px 42px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            color: #F8FAFC;
+            background: #0F172A;
+            border: 1.5px solid #334155;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #10B981;
+            background: #1E293B;
+        }
+
+        .form-group input::placeholder {
+            color: #c4c9d4;
+        }
+
+        .forgot-link {
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            color: #10B981;
+            text-decoration: none;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .btn-signin {
+            width: 100%;
+            padding: 13px;
+            background: #10B981;
+            color: #0F172A;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: background 0.2s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-signin:hover {
+            background: #059669;
+        }
+
+        .btn-signin:active {
+            transform: scale(0.98);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0;
+            color: #d1d5db;
+            font-size: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        .auth-bottom {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .auth-bottom a {
+            color: #10B981;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .auth-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        .error-msg {
+            display: none;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 13px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .error-msg.hidden {
+            display: none !important;
+        }
+
+        .error-msg i {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* Mobile: stack panels */
+        @media (max-width: 640px) {
+            .brand-panel {
+                display: none;
+            }
+
+            .form-panel {
+                padding: 40px 28px;
+            }
+
+            .page-wrap {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <!-- Brand left side -->
+        <div class="brand-panel">
+            <div class="logo">
+                <span>TaskFlow</span>
+            </div>
+            <div class="tagline">
+                <h2>Stay on top of what matters</h2>
+                <p>Track tasks, manage your time, and hit your goals — all in one place.</p>
+                <div class="dots">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form right side -->
+        <div class="form-panel">
+            <div class="form-header">
+                <h1>Welcome back 👋</h1>
+                <p>Sign in to pick up where you left off.</p>
+            </div>
+
+            <div class="error-msg hidden" id="loginError">
+                <i class='bx bx-error-circle'></i>
+                <span id="loginErrorText"></span>
+            </div>
+
+            <form id="loginForm" autocomplete="on">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <div class="input-wrap">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="email" name="email" placeholder="yourname@gmail.com" required
+                            autocomplete="email" pattern="[a-zA-Z0-9._%+\-]+@gmail\.com">
+                    </div>
+                    <p style="font-size:11px; color:#9ca3af; margin-top:4px;">Only @gmail.com addresses are accepted.
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrap">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required
+                            autocomplete="current-password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-signin" id="submitBtn">
+                    <i class='bx bx-log-in-circle'></i>
+                    Sign In
+                </button>
+            </form>
+
+            <div class="divider">or</div>
+
+            <div class="auth-bottom">
+                Don't have an account? <a href="/register.html">Create one — it's free</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorBox = document.getElementById('loginError');
+        const errorText = document.getElementById('loginErrorText');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function showError(msg) {
+            errorText.textContent = msg;
+            errorBox.classList.remove('hidden');
+        }
+        function hideError() {
+            errorBox.classList.add('hidden');
+        }
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            hideError();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (!email.toLowerCase().endsWith('@gmail.com')) {
+                showError('Only Gmail addresses (@gmail.com) are allowed.');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i> Signing in...";
+
+            try {
+                const res = await fetch('http://localhost:3000/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    localStorage.setItem('taskflow_token', data.token);
+                    localStorage.setItem('taskflow_user', data.user.email);
+                    localStorage.setItem('taskflow_name', data.user.name);
+                    window.location.replace('/index.html');
+                } else {
+                    showError(data.error || 'Invalid email or password. Please try again.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "<i class='bx bx-log-in-circle'></i> Sign In";
+                }
+            } catch (err) {
+                showError('Network error. Check your connection and try again.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "<i class='bx bx-log-in-circle'></i> Sign In";
+            }
+        });
+    </script>
+</body>
+
+</html>

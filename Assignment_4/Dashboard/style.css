@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #eef2f7;
+  color: #2d3748;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ──────────────────────────────────────────── */
+header {
+  background: linear-gradient(135deg, #1a6fd4 0%, #1e90ff 100%);
+  color: white;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(26, 111, 212, 0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  font-size: 36px;
+  line-height: 1;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  font-size: 12px;
+  opacity: 0.8;
+  display: block;
+  margin-top: 2px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right label {
+  font-size: 13px;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+#city-select {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a6fd4;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Main ─────────────────────────────────────────────── */
+main {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Stat Cards ───────────────────────────────────────── */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card-blue {
+  border-left-color: #1a6fd4;
+}
+
+.card-teal {
+  border-left-color: #0db89f;
+}
+
+.card-orange {
+  border-left-color: #f7a440;
+}
+
+.card-icon {
+  font-size: 38px;
+  flex-shrink: 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #9aaabf;
+}
+
+.card-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e2d3d;
+  line-height: 1.1;
+}
+
+.card-value.small {
+  font-size: 20px;
+}
+
+.card-sub {
+  font-size: 12px;
+  color: #b0bec5;
+  margin-top: 1px;
+}
+
+/* ── Charts Grid ──────────────────────────────────────── */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.chart-box {
+  background: white;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.chart-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 12px;
+}
+
+.chart-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3d4f6b;
+}
+
+.chart-unit {
+  font-size: 12px;
+  color: #aab4c0;
+  font-weight: 500;
+}
+
+canvas {
+  max-height: 240px;
+}
+
+/* ── Hourly Forecast ──────────────────────────────────── */
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3d4f6b;
+  margin-bottom: 14px;
+}
+
+.hourly-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.hourly-card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: center;
+  min-width: 82px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.hourly-card:hover {
+  transform: translateY(-2px);
+}
+
+.h-time {
+  font-size: 11px;
+  color: #a0aebf;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.h-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.h-temp {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a6fd4;
+}
+
+/* ── Footer ───────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  color: #b0bec5;
+  background: white;
+  border-top: 1px solid #e8edf3;
+}
+
+/* ── Scrollbar ────────────────────────────────────────── */
+.hourly-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.hourly-strip::-webkit-scrollbar-track {
+  background: #f0f4f8;
+  border-radius: 4px;
+}
+
+.hourly-strip::-webkit-scrollbar-thumb {
+  background: #c4cdd8;
+  border-radius: 4px;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .stat-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

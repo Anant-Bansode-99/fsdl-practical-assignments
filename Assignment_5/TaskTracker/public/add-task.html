@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Add Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .add-task-container {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-mesh"></div>
+
+    <nav class="sidebar glass-panel">
+        <div class="logo">
+            <span>TaskFlow</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Dashboard</a></li>
+            <li><a href="/add-task.html" class="active">Add Task</a></li>
+            <li><a href="/analytics.html">Analytics</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="top-bar">
+            <div>
+                <h1>Plan Your Day 🎯</h1>
+                <p>Schedule a new task into your workflow.</p>
+            </div>
+            <div class="user-profile" style="display:flex; align-items:center; gap:12px;">
+                <div style="text-align:right;">
+                    <div id="userNameDisplay" style="font-size:14px; font-weight:600; color:var(--text-main);"></div>
+                    <div id="userEmailDisplay" style="font-size:12px; color:var(--text-muted);"></div>
+                </div>
+                <div class="avatar" id="userAvatar"
+                    style="display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700; color:white; cursor:default;">
+                </div>
+            </div>
+        </header>
+
+        <section class="add-task-container">
+
+            <div class="add-task-card glass-panel" style="padding: 40px;">
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <!-- Left Column: Form -->
+                    <div style="flex: 2; min-width: 300px;">
+                        <h2 style="font-size: 24px; margin-bottom: 30px;">Create New Task</h2>
+                        <form id="addTaskForm">
+                            <div class="form-group">
+                                <label for="taskTitle">Task Title</label>
+                                <input type="text" id="taskTitle" placeholder="What needs to be done?" required
+                                    autocomplete="off">
+                            </div>
+
+                            <div style="display: flex; gap: 20px;">
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="taskDate">Target Date</label>
+                                    <input type="date" id="taskDate" required class="date-picker-input">
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="taskPriority">Priority</label>
+                                    <select id="taskPriority">
+                                        <option value="High">High Priority</option>
+                                        <option value="Medium" selected>Medium Priority</option>
+                                        <option value="Low">Low Priority</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="taskDesc">Description (Optional)</label>
+                                <textarea id="taskDesc" rows="3" placeholder="Add more details..."></textarea>
+                            </div>
+
+                            <!-- Success Message inside the form area -->
+                            <div id="successMsg"
+                                style="display: none; color: var(--success); margin-bottom: 15px; font-weight: 500; background: rgba(16,185,129,0.1); padding: 10px; border-radius: 8px;">
+                                <i class='bx bx-check-circle'></i> Task scheduled successfully!
+                            </div>
+
+                            <button type="submit" class="btn-primary">
+                                <i class='bx bx-plus'></i> Schedule Task
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/add-task.js"></script>
+</body>
+
+</html>
