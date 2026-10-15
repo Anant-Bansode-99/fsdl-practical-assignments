@@ -1,4 +1,4 @@
-Full Stack Development Lab
+# Full Stack Development Lab
 
 This repository contains the practical assignments completed as part of the Full Stack Development Lab (FSDL). It includes the source code, documentation, and implementation of various web development practicals.
 
